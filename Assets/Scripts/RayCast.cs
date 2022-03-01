@@ -38,6 +38,6 @@ public class RayCast : MonoBehaviour
             {
                 Debug.Log("Nothing hit.");
             }
-            }
+        }
     }
 }

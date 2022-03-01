@@ -37,6 +37,11 @@ public class UI : MonoBehaviour
         }
 
         timer.text = "Time: " + startTime.ToString();
+        if (startTime <= 0)
+        {
+            timer.text = "Time Over";
+            scoretext.text = "Game Over";
+        }
     }
 
     public void UpdateScore(int score)
