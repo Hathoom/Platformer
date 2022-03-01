@@ -9,6 +9,11 @@ public class LevelParser : MonoBehaviour
     public GameObject brickPrefab;
     public GameObject questionBoxPrefab;
     public GameObject stonePrefab;
+
+    public GameObject spikePrefab;
+
+    public GameObject finishPrefab;
+
     public Transform environmentRoot;
 
     // --------------------------------------------------------------------------
@@ -77,6 +82,16 @@ public class LevelParser : MonoBehaviour
                 else if (letter == 's')
                 {
                     var block = Instantiate(stonePrefab);
+                    block.transform.position = new Vector3(column + 0.5f, row + 0.5f, 0f);
+                }
+                else if (letter == 'f')
+                {
+                    var block = Instantiate(finishPrefab);
+                    block.transform.position = new Vector3(column + 0.5f, row + 0.5f, 0f);
+                }
+                else if (letter == 'd')
+                {
+                    var block = Instantiate(spikePrefab);
                     block.transform.position = new Vector3(column + 0.5f, row + 0.5f, 0f);
                 }
                 // Todo - Parent the new GameObject under levelRoot
